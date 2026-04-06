@@ -37,8 +37,8 @@ symbol = "SBIN"  # any NSE symbol
 Long-Short Results
 =============================================
 📈 Long-Short Strategy Backtest Results:
-  Initial Capital  : ₹100,000.00
-  Final Capital    : ₹100,607.54
+  Initial Capital  : 100,000.00
+  Final Capital    : 100,607.54
   Sharpe Ratio     : 0.10
   Sortino Ratio    : 0.01
   Maximum Drawdown : -1.98%
@@ -47,8 +47,8 @@ Long-Short Results
 Long-Only Results
 =============================================
 📈 Long-Only Strategy Backtest Results:
-  Initial Capital  : ₹100,000.00
-  Final Capital    : ₹149,684.35
+  Initial Capital  : 100,000.00
+  Final Capital    : 149,684.35
   Sharpe Ratio     : 0.49
   Sortino Ratio    : 0.56
   Maximum Drawdown : -22.60%
