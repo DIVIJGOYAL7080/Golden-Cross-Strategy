@@ -23,7 +23,7 @@ python golden_cross.py
 Change the symbol at the bottom of the file:
  
 ```python
-symbol = "SBIN"  # any NSE symbol
+symbol = "SBIN"  
 ```
  
 ## Sample Output
