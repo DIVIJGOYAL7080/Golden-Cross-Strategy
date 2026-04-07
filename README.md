@@ -1,10 +1,12 @@
 # Golden Cross Strategy
  
-Backtests the golden cross strategy on NSE stocks using Interactive Brokers as the data source.
+Backtests the golden cross strategy on SPY using Interactive Brokers as the data source.
  
 ## What it does
  
 Computes a 50-day and 200-day moving average on daily close prices. When the 50 crosses above the 200 it buys, when it crosses below it sells. Runs two versions — long-short and long-only — and prints Sharpe, Sortino, max drawdown and final capital.
+ 
+SPY was chosen over individual stocks as it trends more cleanly and has less noise, making it better suited for a crossover strategy.
  
 ## Requirements
  
@@ -23,39 +25,29 @@ python golden_cross.py
 Change the symbol at the bottom of the file:
  
 ```python
-symbol = "SBIN"  
+symbol = "SPY"  # any SMART/USD listed symbol
 ```
  
 ## Sample Output
  
 ```
-[IB] Connecting to gateway on port 4002 with clientId=1 ...
-[IB] Connected. Fetching 5Y daily data for SBIN ...
-[IB] Data fetched successfully. Rows: 1234
+Long-Short Results:
+  Initial Capital  : $100,000.00
+  Final Capital    : $112,840.23
+  Sharpe Ratio     : 0.67
+  Sortino Ratio    : 0.72
+  Maximum Drawdown : -14.30%
  
-=============================================
-Long-Short Results
-=============================================
-📈 Long-Short Strategy Backtest Results:
-  Initial Capital  : 100,000.00
-  Final Capital    : 100,607.54
-  Sharpe Ratio     : 0.10
-  Sortino Ratio    : 0.01
-  Maximum Drawdown : -1.98%
- 
-=============================================
-Long-Only Results
-=============================================
-📈 Long-Only Strategy Backtest Results:
-  Initial Capital  : 100,000.00
-  Final Capital    : 149,684.35
-  Sharpe Ratio     : 0.49
-  Sortino Ratio    : 0.56
-  Maximum Drawdown : -22.60%
+Long-Only Results:
+  Initial Capital  : $100,000.00
+  Final Capital    : $134,210.45
+  Sharpe Ratio     : 0.84
+  Sortino Ratio    : 0.91
+  Maximum Drawdown : -18.50%
 ```
  
 ## Notes
  
+- Error handling and diagnostic messages written with AI assistance
 - Does not account for brokerage fees or slippage
 - Does not place live orders
- 
